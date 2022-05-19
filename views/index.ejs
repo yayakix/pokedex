@@ -1,5 +1,5 @@
 <%- include('header') -%>
-
+ <a href="/pokemon/new"> <button>Make new</button></a>
 
 <table>
   <tr>
@@ -7,7 +7,7 @@
     <th>Name</th>
     <th>Image</th>
   </tr>
-  <% for (let i = 0; i < pokemon.length; i++){ %>
+  <% for (let i = 0; i < 3; i++){ %>
   <tr>
     <td><%=pokemon[i].id%></td>
     <td><a href="/pokemon/<%=i%>"><%=pokemon[i].name%></a> </td>
