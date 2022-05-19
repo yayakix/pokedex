@@ -1,0 +1,22 @@
+<%- include('header') -%>
+
+
+<table>
+  <tr>
+    <th>Id</th>
+    <th>Name</th>
+    <th>Image</th>
+  </tr>
+  <% for (let i = 0; i < pokemon.length; i++){ %>
+  <tr>
+    <td><%=pokemon[i].id%></td>
+    <td><a href="/pokemon/<%=i%>"><%=pokemon[i].name%></a> </td>
+    <td>
+        <img src="<%=pokemon[i].img%>" width='100px' alt="pokemon image">
+        </td>
+  </tr>
+  <% } %>
+</table>
+
+
+<%- include('footer') -%>
