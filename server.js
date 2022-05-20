@@ -33,6 +33,7 @@ app.get("/pokemon/:id/edit", (req, res) => {
       strBuilder.push(key + ": " + stat[key]);
     }
   }
+//   convert obj to array and then to string
   console.log(strBuilder);
   stat = strBuilder;
 

@@ -11,21 +11,24 @@
 
   </tr>
   <% for (let i = 0; i < pokemon.length; i++){ %>
-  <tr>
+  <tr class="pokecard">
     <td><%=pokemon[i].id%></td>
     <td><a href="/pokemon/<%=i%>"><%=pokemon[i].name%></a> </td>
+  
+
     <td>
-        <img src="<%=pokemon[i].img%>" width='100px' alt="pokemon image">
+        <img src="<%=pokemon[i].img%>"  alt="pokemon image">
         </td>
-    <td> <a href="/pokemon/<%=i%>/edit"> <button>Edit</button></a></td>
+    <td> <a href="/pokemon/<%=i%>/edit"> <button id="editindex">Edit</button></a></td>
      <td> 
 <form action="/pokemon/<%=i; %>?_method=DELETE" method="POST">
-    <input type="submit" value="DELETE" />
+    <input type="submit" value="DELETE" id="deleteindex"/>
 </form></td>
 
 
   </tr>
   <% } %>
+
 </table>
 
 

@@ -1,0 +1,66 @@
+*{
+    box-sizing: border-box;
+    /* margin: 0 auto; */
+}
+body{
+    /* background-color: antiquewhite; */
+/* background-color: linear-gradient(180deg,3BACB6, #FFD24C); */
+background-image: linear-gradient(to right, #3BACB6 , #FFD24C);
+font-family: 'Press Start 2P', sans-serif;
+
+}
+#title{
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+
+.pokecard{
+    /* background-color: blueviolet; */
+    color: white;
+
+
+}
+
+a:link{
+    color: white;
+    text-decoration: none;
+}
+a:visited {
+  color: white;
+}
+a:hover{
+    color: black;
+    text-decoration: underline;
+}
+img{
+    border: 5px solid #36AE7C;
+    /* border-radius: 30px; */
+    max-width: 100px;
+}
+.imageditdelete{
+    background-color: #FFD24C;
+    color: brown;
+     border: 1px solid white;
+}
+#editindex{
+background-color: #B8F1B0;
+font-size: 15px;
+font-family: 'Press Start 2P', sans-serif;
+}
+
+#deleteindex{
+background-color: #B689C0;
+font-size: 15px;
+font-family: 'Press Start 2P', sans-serif;
+}
+table{
+    display: flex;
+    justify-content: space-evenly;
+}
+td{
+    padding: 30px;
+     border-bottom: 2px solid #125B50;
+}
+
