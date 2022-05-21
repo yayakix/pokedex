@@ -18,13 +18,11 @@ app.get("/pokemon", (req, res) => {
 });
 
 app.get("/pokemon/:id", (req, res) => {
-
   res.render("show.ejs", { pokemon: pokemon[req.params.id] });
 });
 // shows individual pokemon stat pages
 
 app.get("/pokemon/:id/edit", (req, res) => {
-
   let stat = pokemon[req.params.id].stats;
 
   var strBuilder = [];
@@ -33,25 +31,18 @@ app.get("/pokemon/:id/edit", (req, res) => {
       strBuilder.push(key + ": " + stat[key]);
     }
   }
-//   convert obj to array and then to string
+  //   convert obj to array and then to string
   console.log(strBuilder);
   stat = strBuilder;
-
-
 
   res.render("edit.ejs", {
     pokemon: pokemon[req.params.id],
     index: req.params.id,
-    stats: stat
+    stats: stat,
   });
 });
 
 app.post("/pokemon", (req, res) => {
-  let stat = req.body.stats;
-
-  var obj = JSON.parse(stat);
-  console.log(obj);
-
   pokemon.push(req.body);
   console.log(req.body);
   res.redirect("/pokemon");
